@@ -3,8 +3,8 @@ package main
 import (
 	"log"
 
-	"github.com\jaguirre728\red_social\bd"
-	"github.com\jaguirre728\red_social\handlers"
+	"github.com/jaguirre728/red_social.git/bd"
+	"github.com/jaguirre728/red_social.git/handlers"
 )
 
 func main() {

@@ -6,12 +6,16 @@ import (
 	"os"
 
 	"github.com/gorilla/mux"
+	"github.com/jaguirre728/red_social.git/middlew"
+	"github.com/jaguirre728/red_social.git/routers"
 	"github.com/rs/cors"
 )
 
 /*Manejadores seteo mi puerto, el Handler y pongo a escuchar el servidor*/
 func Manejadores() {
 	router := mux.NewRouter()
+
+	router.HandleFunc("/registro", middlew.ChequeoBD(routers.Registro)).Methods("POST")
 
 	PORT := os.Getenv("PORT")
 	if PORT == "" {
