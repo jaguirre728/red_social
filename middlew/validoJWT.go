@@ -6,7 +6,7 @@ import (
 	"github.com/jaguirre728/red_social.git/routers"
 )
 
-/*ValidoJWT es*/
+/*ValidoJWT funcion utilizada para validar ej jwt*/
 func ValidoJWT(next http.HandlerFunc) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		_, _, _, err := routers.ProcesoToken(r.Header.Get("Authorization"))

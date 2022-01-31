@@ -1,9 +1,10 @@
 package routers
 
 import (
-	"enconding/json"
-	"github.com/jaguirre728/red_social.git/bd"
+	"encoding/json"
 	"net/http"
+
+	"github.com/jaguirre728/red_social.git/bd"
 )
 
 /*VerPerfil permite extraer los valores del perfil*/
@@ -22,5 +23,5 @@ func VerPerfil(w http.ResponseWriter, r *http.Request) {
 
 	w.Header().Set("context-type", "application/json")
 	w.WriteHeader(http.StatusCreated)
-	json.NewEncoder(w).Enconde(perfil)
+	json.NewEncoder(w).Encode(perfil)
 }
